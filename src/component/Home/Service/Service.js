@@ -23,7 +23,7 @@ const Service = () => {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <Link to="/about">
+          <Link to="/about/:id">
           <Button variant="outline-warning">Details</Button>
           </Link>
     </Card.Footer>

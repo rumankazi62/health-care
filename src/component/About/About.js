@@ -1,9 +1,12 @@
 import React from 'react';
+import { useParams } from 'react-router';
 
 const About = () => {
+  const {id} = useParams();
+  
   return (
     <div>
-      <h3>This is about</h3>
+      <h3>{id}</h3>
     </div>
   );
 };
