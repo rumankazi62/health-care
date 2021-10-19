@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button, Container, Form, Nav, Navbar} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './Header.css';
 
 const Header = () => {
   return (
@@ -11,19 +13,22 @@ const Header = () => {
     <Navbar.Collapse id="navbarScroll">
       <Nav
         className="me-auto my-2 my-lg-0"
-        style={{ maxHeight: '100px' }}
+        style={{ maxHeight: '100px'}}
         navbarScroll
       >
-        <Nav.Link href="#action1">Home</Nav.Link>
-        <Nav.Link href="#action2">About</Nav.Link>
-        <Nav.Link href="#action2">Packages</Nav.Link>
+        <Link className="nav-link" to="/home">Home</Link>
+        <Link className="nav-link" to="/about">About</Link>
+        <Link className="nav-link" to="/packages">Packages</Link>
       </Nav>
       <Form className="d-flex">
       <Navbar.Text>
         Signed in as: <a href="#login">Mark Otto</a>
       </Navbar.Text>
-        <Button className="ms-3" variant="outline-primary">Search</Button>
-      </Form>
+        <Button className="ms-3" variant="outline-primary">LogOut</Button>
+        <Link to="/login">
+        <Button className="ms-3" variant="outline-primary">Login</Button>
+        </Link>
+      </Form> 
     </Navbar.Collapse>
   </Container>
 </Navbar>
