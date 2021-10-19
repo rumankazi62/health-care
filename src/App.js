@@ -13,6 +13,7 @@ import Login from './component/Login/Login';
 import Trainer from './component/Trainer/Trainer';
 import AuthProvider from './context/AuthProvider';
 import Register from './Register/Register';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -27,15 +28,15 @@ function App() {
         <Route path="/home">
           <Home></Home>
         </Route>
-        <Route path="/about/:id">
+        <PrivateRoute path="/about/:id">
           <About></About>
-        </Route>
-        <Route path="/packages">
+        </PrivateRoute>
+        <PrivateRoute path="/packages">
           <Packages></Packages>
-        </Route>
-        <Route path="/trainer">
+        </PrivateRoute>
+        <PrivateRoute path="/trainer">
           <Trainer></Trainer>
-        </Route>
+        </PrivateRoute>
         <Route path="/login">
           <Login></Login>
         </Route>
